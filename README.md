@@ -43,5 +43,5 @@ This is a simple daily scheduler
 
 ## SCREENSHOT
 ![Alt Text]
-(https://media.giphy.com/media/pB88ze25g9NISDtOJv/giphy.gif)
+https://media.giphy.com/media/pB88ze25g9NISDtOJv/giphy.gif
 
