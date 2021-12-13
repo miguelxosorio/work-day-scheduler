@@ -1,5 +1,8 @@
 # Work Day Scheduler Starter Code
 
+## Link
+https://miguelxosorio.github.io/work-day-scheduler/
+
 # User Story
 AS AN employee with a busy schedule
 I WANT to add important events to a daily planner
@@ -38,4 +41,7 @@ Miguel Osorio
 ## Description
 This is a simple daily scheduler 
 
-## GIF OR JPEG 
+## SCREENSHOT
+![Alt Text]
+(https://media.giphy.com/media/pB88ze25g9NISDtOJv/giphy.gif)
+
