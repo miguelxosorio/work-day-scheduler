@@ -20,7 +20,7 @@ SO THAT I can manage my time effectively
 6. WHEN I refresh the page
  - THEN the saved events persist
 
-# TODO's
+# TODO's/ The Challenge
 1. Current day displayed at the header ✔️
     - src moment.js library
 2. Time blocks should show on the body that reflect 9-5 working hrs ✔️
@@ -30,12 +30,12 @@ SO THAT I can manage my time effectively
         - clickable, once clicked user can enter a text/event
     - save button:✔️
         - function, events are saved in a "LOCAL STORAGE"
-3. Upon refresh, events saved should persist 
+3. Upon refresh, events saved should persist ✔️
 
 ## Contributors
 Miguel Osorio
 
 ## Description
-
+This is a simple daily scheduler 
 
 ## GIF OR JPEG 

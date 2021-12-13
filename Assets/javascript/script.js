@@ -1,13 +1,15 @@
 // setting up date to show on the top of the page
 const today = moment();
 $("#currentDay").text(today.format("dddd, MMMM Do"));
+
 console.log(today.toString());
 
-// console logging the time in military time
+// console logging the time in military time (for example 4pm is 1600 and then converts it to 16) so
+// we could use it inside the createTask function below as solid integers as the <textarea> ids
 console.log(moment().hour());
 
 // variable for the container holding the timeblocks - called the class in the div
-var containerEl = $(".container")
+var containerEl = $(".container");
 
 // time variables
 var timeEl = 
@@ -30,7 +32,7 @@ var createTask = function() {
     var t = 0;
     var currentHour = moment().hour();
     containerEl.empty()
-    // ${timeEl[t++]} calls the Time in the array - timeEl
+    
     for (let i = 9; i < 18; i++) {
         var status = "";// declaring an empty status variable first
         
@@ -50,8 +52,9 @@ var createTask = function() {
         }
         
         // textarea id is relating to button data-id ${i} on click event
+        // ${timeEl[t++]} calls the Time in the array to print in the div displaying the time with increments per hour onto the next divs
         // A data attribute is exactly that: a custom attribute that stores data.
-        //They are always prefixed with "data-" followed by something descriptive
+        // They are always prefixed with "data-" followed by something descriptive
         // An element can have any number of data attributes you want.
         containerEl.append(`
         <div id="9a" class="row time-block">
@@ -74,29 +77,18 @@ var createTask = function() {
         // console.log(event);
 
         // set up local storage
-        // let myLocalStorage = localStorage.setItem(id, JSON.stringify(event));
-        // console.log(myLocalStorage);
-
-        // localStorage.getItem(id);
-
-        
-        localStorage.setItem(id, JSON.stringify(event));
+        localStorage.setItem(id, (event)); // no need to JSON.stringify because the value is already a string
         console.log(id.toString());
         // console.log(JSON.stringify(event));
         console.log(localStorage.getItem(id));
     
-
-        // let myTasks = $(".description")
-        // myTasks.value = localStorage.getItem(id);
-        // console.log(myTasks);
     });
 }; 
 
+// function to load the tasks, $("#") targets the id of the specific text area and gets the value stored in the local storage
+// therefore, tasks stored persists even after refreshing the webpage
 var getTasks = function() {
-    // var stringValue = localStorage.getItem(9);
-    
-    // document.getElementById('#ta9').value = stringValue.replace('"', '');
-    
+   
     $("#ta9").val(localStorage.getItem(9));
     $("#ta10").val(localStorage.getItem(10));
     $("#ta11").val(localStorage.getItem(11));
@@ -106,9 +98,8 @@ var getTasks = function() {
     $("#ta15").val(localStorage.getItem(15));
     $("#ta16").val(localStorage.getItem(16));
     $("#ta17").val(localStorage.getItem(17));
-    console.log(eval(localStorage.getItem(9)));
 
-} 
+}; 
 
 createTask();
 getTasks();
