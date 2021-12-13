@@ -32,5 +32,5 @@ Miguel Osorio
 This is a simple daily scheduler 
 
 ## SCREENSHOT
-![](Work_Day_Scheduler.gif)
+![Demo](Work_Day_Scheduler.gif)
 
