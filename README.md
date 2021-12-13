@@ -33,7 +33,9 @@ SO THAT I can manage my time effectively
 3. Upon refresh, events saved should persist 
 
 ## Contributors
+Miguel Osorio
 
 ## Description
+
 
 ## GIF OR JPEG 

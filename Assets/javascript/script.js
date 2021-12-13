@@ -50,11 +50,14 @@ var createTask = function() {
         }
         
         // textarea id is relating to button data-id ${i} on click event
+        // A data attribute is exactly that: a custom attribute that stores data.
+        //They are always prefixed with "data-" followed by something descriptive
+        // An element can have any number of data attributes you want.
         containerEl.append(`
         <div id="9a" class="row time-block">
         <div class="col-1 hour">${timeEl[t++]}</div> 
        
-         <textarea id="${i}" class="col-10 description ${status}"></textarea>
+         <textarea id="ta${i}" class="col-10 description ${status}"></textarea>
        
         <button data-id="${i}" class="col-1 saveBtn d-flex justify-content-center align-items-center">
          <i class="fas fa-lock"> SAVE</i>
@@ -67,15 +70,45 @@ var createTask = function() {
     saveBtnEl.on("click", function() {
         var id = $(this).attr("data-id"); // Select 'this' with an attribute of data-id which is the button
 
-        var event = $("#"+ id).val();
+        var event = $("#ta"+ id).val();
         // console.log(event);
+
+        // set up local storage
+        // let myLocalStorage = localStorage.setItem(id, JSON.stringify(event));
+        // console.log(myLocalStorage);
+
+        // localStorage.getItem(id);
+
+        
         localStorage.setItem(id, JSON.stringify(event));
-        console.log(id);
-        let x = $(".description")
-        x.value = localStorage.getItem(id);
-        console.log(x);
+        console.log(id.toString());
+        // console.log(JSON.stringify(event));
+        console.log(localStorage.getItem(id));
+    
+
+        // let myTasks = $(".description")
+        // myTasks.value = localStorage.getItem(id);
+        // console.log(myTasks);
     });
 }; 
 
+var getTasks = function() {
+    // var stringValue = localStorage.getItem(9);
+    
+    // document.getElementById('#ta9').value = stringValue.replace('"', '');
+    
+    $("#ta9").val(localStorage.getItem(9));
+    $("#ta10").val(localStorage.getItem(10));
+    $("#ta11").val(localStorage.getItem(11));
+    $("#ta12").val(localStorage.getItem(12));
+    $("#ta13").val(localStorage.getItem(13));
+    $("#ta14").val(localStorage.getItem(14));
+    $("#ta15").val(localStorage.getItem(15));
+    $("#ta16").val(localStorage.getItem(16));
+    $("#ta17").val(localStorage.getItem(17));
+    console.log(eval(localStorage.getItem(9)));
+
+} 
 
 createTask();
+getTasks();
