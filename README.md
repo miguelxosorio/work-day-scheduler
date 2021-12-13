@@ -1,4 +1,4 @@
-# Work Day Scheduler Starter Code
+# Work Day Scheduler
 
 ## Link
 https://miguelxosorio.github.io/work-day-scheduler/
